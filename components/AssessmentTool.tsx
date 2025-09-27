@@ -182,8 +182,9 @@ export default function AssessmentTool({ onBookingClick, onAssessmentComplete }:
               </div>
 
               <div className="flex flex-col gap-3 sm:gap-4">
-                <button 
+                <button
                   onClick={onBookingClick}
+                  type="button"
                   className="w-full inline-flex items-center justify-center bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 sm:py-4 rounded-full font-medium hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   Book Now

@@ -23,8 +23,8 @@ export default function PageWrapper() {
       <Navigation onBookingClick={() => setIsBookingModalOpen(true)} />
       <main className="overflow-hidden">
         <PremiumHero onBookingClick={() => setIsBookingModalOpen(true)} />
-        <AssessmentTool 
-          onBookingClick={() => setIsBookingModalOpen(true)} 
+        <AssessmentTool
+          onBookingClick={() => setIsBookingModalOpen(true)}
           onAssessmentComplete={(data) => setAssessmentData(data)}
         />
         <AboutSection onBookingClick={() => setIsBookingModalOpen(true)} />
@@ -38,7 +38,7 @@ export default function PageWrapper() {
       <Footer />
       
       {/* Booking Modal */}
-      <BookingModal 
+      <BookingModal
         isOpen={isBookingModalOpen}
         onClose={() => setIsBookingModalOpen(false)}
         assessmentData={assessmentData}

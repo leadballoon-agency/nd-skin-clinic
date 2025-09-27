@@ -58,6 +58,12 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  other: {
+    'geo.region': 'GB-GMR',
+    'geo.placename': 'Prestwich, Manchester',
+    'geo.position': '53.5258;-2.2794',
+    'ICBM': '53.5258, -2.2794',
+  },
 }
 
 export default function RootLayout({
@@ -67,21 +73,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-GB">
-      <head>
+      <body className={inter.className}>
         <StructuredData />
         <FacebookPixel />
-        <link rel="canonical" href="https://co2laser.co" />
-        <link rel="alternate" href="https://co2laser.co" hrefLang="en-GB" />
-        <link rel="alternate" href="https://co2laser.co" hrefLang="en" />
-        <meta name="geo.region" content="GB-GMR" />
-        <meta name="geo.placename" content="Prestwich, Manchester" />
-        <meta name="geo.position" content="53.5258;-2.2794" />
-        <meta name="ICBM" content="53.5258, -2.2794" />
-        <meta name="theme-color" content="#0ea5e9" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      </head>
-      <body className={inter.className}>{children}</body>
+        {children}
+      </body>
     </html>
   )
 }

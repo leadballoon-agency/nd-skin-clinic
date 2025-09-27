@@ -3,16 +3,7 @@
 import { useState, useEffect } from 'react'
 import { trackBookingModalOpen, trackBookingSubmit } from './FacebookPixel'
 
-// Load calendar widget script
-if (typeof window !== 'undefined') {
-  const script = document.createElement('script')
-  script.src = 'https://link.hifumanchester.com/js/form_embed.js'
-  script.type = 'text/javascript'
-  script.async = true
-  if (!document.querySelector('script[src="https://link.hifumanchester.com/js/form_embed.js"]')) {
-    document.head.appendChild(script)
-  }
-}
+// Note: GHL script removed to prevent interference - calendar widget uses iframe directly
 
 interface BookingModalProps {
   isOpen: boolean
@@ -21,7 +12,8 @@ interface BookingModalProps {
 }
 
 export default function BookingModal({ isOpen, onClose, assessmentData }: BookingModalProps) {
-  const [step, setStep] = useState(1)
+  // Start on Step 3 (calendar) if coming from assessment, otherwise Step 1
+  const [step, setStep] = useState(assessmentData ? 3 : 1)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -102,9 +94,9 @@ export default function BookingModal({ isOpen, onClose, assessmentData }: Bookin
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4">
+    <div className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center sm:p-4">
       {/* Backdrop */}
-      <div 
+      <div
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         onClick={onClose}
       />
