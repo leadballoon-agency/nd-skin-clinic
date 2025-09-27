@@ -1,3 +1,5 @@
+import { trackPhoneClick } from './FacebookPixel'
+
 interface CTASectionProps {
   onBookingClick?: () => void
 }
@@ -31,7 +33,11 @@ export default function CTASection({ onBookingClick }: CTASectionProps) {
           <div className="bg-white/10 backdrop-blur rounded-xl sm:rounded-2xl p-4 sm:p-6">
             <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">📞</div>
             <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Call Us</h3>
-            <a href="tel:+447476989450" className="text-white/90 hover:text-white text-sm sm:text-base">
+            <a
+              href="tel:+447476989450"
+              onClick={trackPhoneClick}
+              className="text-white/90 hover:text-white text-sm sm:text-base"
+            >
               +44 7476 989450
             </a>
           </div>

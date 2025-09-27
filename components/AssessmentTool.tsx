@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { trackAssessmentStart, trackAssessmentComplete } from './FacebookPixel'
 
 interface AssessmentToolProps {
   onBookingClick?: () => void
@@ -49,12 +50,22 @@ export default function AssessmentTool({ onBookingClick, onAssessmentComplete }:
   const handleAnswer = (value: string) => {
     const newAnswers = { ...answers, [step]: value }
     setAnswers(newAnswers)
+
+    // Track first question as assessment start
+    if (step === 1) {
+      trackAssessmentStart()
+    }
+
     if (step < questions.length) {
       setStep(step + 1)
     } else {
       // Show results and emit assessment completion
       setStep(step + 1) // Move to results view
       const recommendation = getRecommendation(newAnswers)
+
+      // Track assessment completion
+      trackAssessmentComplete(recommendation.treatment)
+
       onAssessmentComplete?.({
         answers: newAnswers,
         recommendation,

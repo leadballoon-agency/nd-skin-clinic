@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { trackBookingModalOpen, trackBookingSubmit } from './FacebookPixel'
 
 // Load calendar widget script
 if (typeof window !== 'undefined') {
@@ -39,10 +40,13 @@ export default function BookingModal({ isOpen, onClose, assessmentData }: Bookin
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
+      // Track booking modal open
+      trackBookingModalOpen()
+
       // Pre-fill treatment type if assessment is completed
       if (assessmentData?.recommendation) {
-        setFormData(prev => ({ 
-          ...prev, 
+        setFormData(prev => ({
+          ...prev,
           treatmentType: 'recommended',
           concerns: `Assessment Results: Recommended ${assessmentData.recommendation.treatment}`
         }))
@@ -62,10 +66,13 @@ export default function BookingModal({ isOpen, onClose, assessmentData }: Bookin
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
+    // Track booking submission
+    trackBookingSubmit(formData.treatmentType, assessmentData?.recommendation?.price)
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000))
-    
+
     setIsSubmitting(false)
     setIsSuccess(true)
     

@@ -1,3 +1,5 @@
+import { trackPRPDealView } from './FacebookPixel'
+
 interface PremiumTreatmentsProps {
   onBookingClick?: () => void
 }
@@ -91,8 +93,13 @@ export default function PremiumTreatments({ onBookingClick }: PremiumTreatmentsP
                     <p className="text-xs text-neutral-500 sm:hidden">From</p>
                     <p className="text-xl sm:text-2xl font-bold gradient-text">{treatment.price}</p>
                   </div>
-                  <button 
-                    onClick={onBookingClick}
+                  <button
+                    onClick={() => {
+                      if (treatment.title === 'PRP For Free Deal') {
+                        trackPRPDealView()
+                      }
+                      onBookingClick?.()
+                    }}
                     className={`px-4 sm:px-5 lg:px-6 py-2.5 sm:py-3 rounded-full bg-gradient-to-r ${treatment.gradient} text-white font-medium hover:shadow-lg transition-all duration-300 sm:hover:scale-105 text-sm sm:text-base`}
                   >
                     Get Started
