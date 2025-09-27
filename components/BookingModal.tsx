@@ -12,8 +12,8 @@ interface BookingModalProps {
 }
 
 export default function BookingModal({ isOpen, onClose, assessmentData }: BookingModalProps) {
-  // Start on Step 3 (calendar) if coming from assessment, otherwise Step 1
-  const [step, setStep] = useState(assessmentData ? 3 : 1)
+  // Always show Step 3 (GHL calendar) - old form removed
+  const [step, setStep] = useState(3)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -160,8 +160,8 @@ export default function BookingModal({ isOpen, onClose, assessmentData }: Bookin
           <form onSubmit={handleSubmit} className="flex flex-col flex-1 overflow-hidden">
             {/* Scrollable Content Area */}
             <div className="flex-1 overflow-y-auto p-6 sm:p-8">
-              {/* Step 1: Personal Information */}
-              {step === 1 && (
+              {/* Step 1: Personal Information - COMMENTED OUT - USING ONLY GHL CALENDAR */}
+              {false && step === 1 && (
                 <div className="space-y-4 sm:space-y-6 animate-fade-in">
                   <div>
                     <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Personal Information</h3>
@@ -256,8 +256,8 @@ export default function BookingModal({ isOpen, onClose, assessmentData }: Bookin
               </div>
               )}
 
-              {/* Step 2: Treatment Details */}
-              {step === 2 && (
+              {/* Step 2: Treatment Details - COMMENTED OUT - USING ONLY GHL CALENDAR */}
+              {false && step === 2 && (
               <div className="space-y-4 sm:space-y-6 animate-fade-in">
                 <div>
                   <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Treatment Details</h3>
