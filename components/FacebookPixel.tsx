@@ -6,25 +6,14 @@ import Script from 'next/script'
 declare global {
   interface Window {
     fbq: any
+    _fbq_pixel_initialized?: boolean
   }
 }
 
 const FACEBOOK_PIXEL_ID = '1696629697557651'
 
 export default function FacebookPixel() {
-  useEffect(() => {
-    // Initialize fbq function
-    if (typeof window !== 'undefined') {
-      window.fbq = window.fbq || function(...args: any[]) {
-        (window.fbq.q = window.fbq.q || []).push(args)
-      }
-      window.fbq.l = +new Date()
-
-      // Initialize pixel
-      window.fbq('init', FACEBOOK_PIXEL_ID)
-      window.fbq('track', 'PageView')
-    }
-  }, [])
+  // Pixel initialization handled by Script tag below
 
   return (
     <>
@@ -41,8 +30,12 @@ export default function FacebookPixel() {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '${FACEBOOK_PIXEL_ID}');
-            fbq('track', 'PageView');
+
+            if (!window._fbq_pixel_initialized) {
+              fbq('init', '${FACEBOOK_PIXEL_ID}');
+              fbq('track', 'PageView');
+              window._fbq_pixel_initialized = true;
+            }
           `,
         }}
       />
