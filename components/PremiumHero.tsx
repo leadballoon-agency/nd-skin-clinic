@@ -59,8 +59,8 @@ export default function PremiumHero({ onBookingClick }: PremiumHeroProps) {
             {/* Social Proof - Mobile Optimized */}
             <div className="flex items-center justify-center lg:justify-start space-x-6 pt-2">
               <div className="text-center">
-                <p className="text-2xl font-bold text-primary-600">MD</p>
-                <p className="text-xs text-neutral-600">Doctor-Led</p>
+                <p className="text-2xl font-bold text-primary-600">20+</p>
+                <p className="text-xs text-neutral-600">Years Experience</p>
               </div>
               <div className="text-neutral-300">|</div>
               <div className="text-center">
@@ -84,7 +84,7 @@ export default function PremiumHero({ onBookingClick }: PremiumHeroProps) {
                 className="rounded-2xl shadow-xl w-full"
               />
               <div className="absolute -top-2 -right-2 bg-white rounded-lg shadow-lg p-2">
-                <p className="text-lg font-bold gradient-text">MD</p>
+                <p className="text-lg font-bold gradient-text">AP</p>
               </div>
             </div>
           </div>
