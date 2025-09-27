@@ -20,20 +20,47 @@ export default function PageWrapper() {
 
   return (
     <>
-      <Navigation onBookingClick={() => setIsBookingModalOpen(true)} />
+      <Navigation onBookingClick={() => {
+        setAssessmentData({ skipToCalendar: true })
+        setIsBookingModalOpen(true)
+      }} />
       <main className="overflow-hidden">
-        <PremiumHero onBookingClick={() => setIsBookingModalOpen(true)} />
+        <PremiumHero onBookingClick={() => {
+          setAssessmentData({ skipToCalendar: true })
+          setIsBookingModalOpen(true)
+        }} />
         <AssessmentTool
           onBookingClick={() => setIsBookingModalOpen(true)}
           onAssessmentComplete={(data) => setAssessmentData(data)}
         />
-        <AboutSection onBookingClick={() => setIsBookingModalOpen(true)} />
-        <TeamSection onBookingClick={() => setIsBookingModalOpen(true)} />
-        <PremiumTreatments onBookingClick={() => setIsBookingModalOpen(true)} />
-        <ResultsGallery onBookingClick={() => setIsBookingModalOpen(true)} />
-        <ProcessSection onBookingClick={() => setIsBookingModalOpen(true)} />
-        <FAQ onBookingClick={() => setIsBookingModalOpen(true)} />
-        <CTASection onBookingClick={() => setIsBookingModalOpen(true)} />
+        <AboutSection onBookingClick={() => {
+          setAssessmentData({ skipToCalendar: true })
+          setIsBookingModalOpen(true)
+        }} />
+        <TeamSection onBookingClick={() => {
+          setAssessmentData({ skipToCalendar: true })
+          setIsBookingModalOpen(true)
+        }} />
+        <PremiumTreatments onBookingClick={() => {
+          setAssessmentData({ skipToCalendar: true })
+          setIsBookingModalOpen(true)
+        }} />
+        <ResultsGallery onBookingClick={() => {
+          setAssessmentData({ skipToCalendar: true })
+          setIsBookingModalOpen(true)
+        }} />
+        <ProcessSection onBookingClick={() => {
+          setAssessmentData({ skipToCalendar: true })
+          setIsBookingModalOpen(true)
+        }} />
+        <FAQ onBookingClick={() => {
+          setAssessmentData({ skipToCalendar: true })
+          setIsBookingModalOpen(true)
+        }} />
+        <CTASection onBookingClick={() => {
+          setAssessmentData({ skipToCalendar: true })
+          setIsBookingModalOpen(true)
+        }} />
       </main>
       <Footer />
       
@@ -46,7 +73,10 @@ export default function PageWrapper() {
       
       {/* Floating Book Now Button */}
       <button
-        onClick={() => setIsBookingModalOpen(true)}
+        onClick={() => {
+          setAssessmentData({ skipToCalendar: true })
+          setIsBookingModalOpen(true)
+        }}
         className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-full font-medium shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 flex items-center group"
       >
         <span className="mr-2">Book Now</span>
