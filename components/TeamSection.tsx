@@ -5,16 +5,16 @@ interface TeamSectionProps {
 export default function TeamSection({ onBookingClick }: TeamSectionProps) {
   const team = [
     {
-      name: 'Natalia Dmitrijeva',
-      title: 'Owner & Advanced Laser Practitioner',
+      name: 'Yulia',
+      title: 'Beauty Therapist & Skincare Expert',
       credentials: '',
-      image: '/images/natalia.jpg',
-      bio: 'The owner and advanced laser, skin practitioner at ND Skin clinic. Started her beauty and skincare journey in 2005 in UK. Natalia\'s in-depth knowledge of advanced cosmetic procedures, all types of laser and non-surgical body contouring through 20 years of practical experience allows her to create bespoke highly effective treatment plans.',
+      image: '/images/yulia.jpg',
+      bio: 'Dynamic, passionate and talented beauty therapist delivering excellent customer service and treatments to our clients. Yulia is experienced and fully competent with our core beauty offerings, carrying out treatments to the highest standard.',
       qualifications: [
-        'Advanced Laser & Skin Practitioner',
-        'All Types of Laser Specialist',
-        'Non-Surgical Body Contouring',
-        '20+ Years Experience (since 2005)'
+        'LVL Lashes & Lash Fillers',
+        'Lash & Brow Lamination',
+        'Hydrafacial & Environ Facials',
+        'Non-Surgical Body Sculpting'
       ]
     },
     {

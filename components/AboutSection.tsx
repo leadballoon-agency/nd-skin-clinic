@@ -7,10 +7,10 @@ export default function AboutSection({ onBookingClick }: AboutSectionProps) {
     <section id="about" className="py-12 sm:py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto section-padding">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <span className="text-primary-600 font-medium tracking-wider uppercase text-xs sm:text-sm">Meet Your Beauty Specialist</span>
+          <span className="text-primary-600 font-medium tracking-wider uppercase text-xs sm:text-sm">Meet Your Lead Practitioner</span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-2 sm:mt-4">
             Expert Care from
-            <span className="block gradient-text">Yulia</span>
+            <span className="block gradient-text">Natalia</span>
           </h2>
         </div>
 
@@ -19,9 +19,9 @@ export default function AboutSection({ onBookingClick }: AboutSectionProps) {
           <div className="relative order-1 lg:order-1">
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl mx-auto max-w-sm lg:max-w-none">
               <div className="aspect-[4/5] sm:aspect-[4/5] relative">
-                <img 
-                  src="/images/img-1.jpg" 
-                  alt="Yulia - Beauty Therapist" 
+                <img
+                  src="/images/natalia.jpg"
+                  alt="Natalia - Advanced Laser Practitioner"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-100/10 to-primary-300/10"></div>
@@ -36,7 +36,7 @@ export default function AboutSection({ onBookingClick }: AboutSectionProps) {
                 </div>
                 <div>
                   <p className="font-bold text-base sm:text-lg">Expert</p>
-                  <p className="text-sm sm:text-base text-neutral-600">Beauty Therapist</p>
+                  <p className="text-sm sm:text-base text-neutral-600">Laser Practitioner</p>
                 </div>
               </div>
             </div>
@@ -45,33 +45,33 @@ export default function AboutSection({ onBookingClick }: AboutSectionProps) {
           <div className="space-y-4 sm:space-y-6 order-2 lg:order-2">
             <div className="lg:hidden text-center">
               <h3 className="font-display text-2xl sm:text-3xl font-bold">
-                Beauty Therapist & Skincare Expert
+                Advanced Laser & Skin Practitioner
               </h3>
             </div>
             <div className="hidden lg:block">
               <h3 className="font-display text-3xl font-bold">
-                Yulia
-                <span className="block text-xl text-primary-600 font-normal mt-2">Beauty Therapist & Skincare Expert</span>
+                Natalia
+                <span className="block text-xl text-primary-600 font-normal mt-2">Advanced Laser & Skin Practitioner</span>
               </h3>
             </div>
 
             <p className="text-base sm:text-lg text-neutral-600 leading-relaxed">
-              Dynamic, passionate and talented beauty therapist delivering excellent customer service and treatments to our clients.
-              I am experienced and fully competent with our core beauty offerings, carrying out treatments to the highest standard.
+              The owner and advanced laser practitioner at ND Skin Clinic. I started my beauty and skincare journey in 2005 in the UK.
+              My in-depth knowledge of advanced cosmetic procedures and 20 years of practical experience allows me to create bespoke, highly effective treatment plans.
             </p>
 
             <p className="text-base sm:text-lg text-neutral-600 leading-relaxed">
-              I offer a comprehensive range of beauty services including LVL lashes, facials, Hydrafacial, and non-surgical body sculpting.
+              I specialize in all types of laser treatments, CO2 laser procedures, and non-surgical body contouring, delivering exceptional results with personalized care.
             </p>
 
             <div className="space-y-3">
               <h4 className="font-bold text-lg">Qualifications & Expertise</h4>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  'LVL Lashes & Lash Fillers',
-                  'Lash & Brow Lamination',
-                  'Hydrafacial & Environ Facials',
-                  'Non-Surgical Body Sculpting'
+                  'Advanced CO2 Laser Specialist',
+                  'All Types of Laser Treatments',
+                  'Non-Surgical Body Contouring',
+                  '20+ Years Experience (since 2005)'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start sm:items-center text-neutral-700">
                     <svg className="w-4 h-4 sm:w-5 sm:h-5 text-primary-500 mr-2 flex-shrink-0 mt-0.5 sm:mt-0" fill="currentColor" viewBox="0 0 20 20">
