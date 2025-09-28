@@ -69,8 +69,8 @@ export default function PremiumHero({ onBookingClick }: PremiumHeroProps) {
               </div>
               <div className="text-neutral-300">|</div>
               <div className="text-center">
-                <p className="text-2xl font-bold text-primary-600">£150</p>
-                <p className="text-xs text-neutral-600">Starting</p>
+                <p className="text-2xl font-bold text-primary-600">5.0</p>
+                <p className="text-xs text-neutral-600">Google Rating</p>
               </div>
             </div>
           </div>
@@ -78,14 +78,11 @@ export default function PremiumHero({ onBookingClick }: PremiumHeroProps) {
           {/* Mobile Image Section - Simple and Clean */}
           <div className="relative mt-8 lg:hidden">
             <div className="relative mx-auto max-w-[320px]">
-              <img 
-                src="/images/home1.jpg" 
-                alt="CO2 Laser Treatment" 
+              <img
+                src="/images/home1.jpg"
+                alt="CO2 Laser Treatment"
                 className="rounded-2xl shadow-xl w-full"
               />
-              <div className="absolute -top-2 -right-2 bg-white rounded-lg shadow-lg p-2">
-                <p className="text-lg font-bold gradient-text">AP</p>
-              </div>
             </div>
           </div>
 
