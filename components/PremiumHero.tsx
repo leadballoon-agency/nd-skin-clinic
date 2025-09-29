@@ -8,8 +8,8 @@ export default function PremiumHero({ onBookingClick }: PremiumHeroProps) {
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-primary-100">
         <div className="absolute inset-0 opacity-30">
-          <div 
-            className="absolute inset-0" 
+          <div
+            className="absolute inset-0"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230ea5e9' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
               backgroundSize: '60px 60px'
@@ -39,7 +39,7 @@ export default function PremiumHero({ onBookingClick }: PremiumHeroProps) {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
-              <button 
+              <button
                 onClick={onBookingClick}
                 className="inline-flex items-center justify-center bg-gradient-to-r from-primary-500 to-primary-600 text-white px-7 py-3.5 rounded-full font-medium text-base hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               >
@@ -48,8 +48,8 @@ export default function PremiumHero({ onBookingClick }: PremiumHeroProps) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </button>
-              <a 
-                href="#assessment" 
+              <a
+                href="#assessment"
                 className="inline-flex items-center justify-center border-2 border-primary-500 text-primary-600 px-7 py-3.5 rounded-full font-medium text-base hover:bg-primary-50 transition-all duration-300 w-full sm:w-auto"
               >
                 Take Assessment
@@ -75,30 +75,58 @@ export default function PremiumHero({ onBookingClick }: PremiumHeroProps) {
             </div>
           </div>
 
-          {/* Mobile Image Section - Simple and Clean */}
+          {/* Mobile Video Section - Simple and Clean */}
           <div className="relative mt-8 lg:hidden">
             <div className="relative mx-auto max-w-[320px]">
-              <img
-                src="/images/home1.jpg"
-                alt="CO2 Laser Treatment"
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="rounded-2xl shadow-xl w-full"
-              />
+                poster="/images/home1.jpg"
+              >
+                <source
+                  src="https://storage.googleapis.com/msgsndr/uVuoMmNchQqMYqkCNrKB/media/68d98b4c4c35d630808ee872.mp4"
+                  type="video/mp4"
+                />
+                {/* Fallback for browsers that don't support video */}
+                <img
+                  src="/images/home1.jpg"
+                  alt="CO2 Laser Treatment"
+                  className="rounded-2xl shadow-xl w-full"
+                />
+              </video>
             </div>
           </div>
 
-          {/* Desktop Image Section */}
+          {/* Desktop Video Section */}
           <div className="relative mt-8 lg:mt-0 hidden lg:block">
             <div className="relative h-[600px] flex items-center justify-center p-8">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-primary-100 rounded-3xl"></div>
-              
+
               <div className="relative flex items-center justify-center h-full w-full">
-                {/* Main Image */}
+                {/* Main Video */}
                 <div className="relative w-full max-w-md">
-                  <img 
-                    src="/images/home1.jpg" 
-                    alt="CO2 Laser Treatment" 
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                     className="rounded-2xl shadow-2xl w-full animate-float"
-                  />
+                    poster="/images/home1.jpg"
+                  >
+                    <source
+                      src="https://storage.googleapis.com/msgsndr/uVuoMmNchQqMYqkCNrKB/media/68d98b4c4c35d630808ee872.mp4"
+                      type="video/mp4"
+                    />
+                    {/* Fallback for browsers that don't support video */}
+                    <img
+                      src="/images/home1.jpg"
+                      alt="CO2 Laser Treatment"
+                      className="rounded-2xl shadow-2xl w-full animate-float"
+                    />
+                  </video>
                 </div>
               </div>
 
