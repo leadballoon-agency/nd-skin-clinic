@@ -8,7 +8,7 @@ export default function TeamSection({ onBookingClick }: TeamSectionProps) {
       name: 'Natalia Dmitrijeva',
       title: 'Owner & Advanced Laser Practitioner',
       credentials: '',
-      image: '/images/natalia.jpg',
+      image: '/images/Natalia-laser-specialist.jpg',
       bio: 'Owner and advanced laser practitioner at ND Skin Clinic. Started her beauty and skincare journey in 2005 in the UK. Natalia\'s in-depth knowledge of advanced cosmetic procedures, all types of laser and non-surgical body contouring procedures through 20 years of practical experience allows her to create bespoke highly effective treatment plans.',
       qualifications: [
         '20+ Years Beauty & Skincare Experience',
