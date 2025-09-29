@@ -5,6 +5,19 @@ interface TeamSectionProps {
 export default function TeamSection({ onBookingClick }: TeamSectionProps) {
   const team = [
     {
+      name: 'Natalia Dmitrijeva',
+      title: 'Owner & Advanced Laser Practitioner',
+      credentials: '',
+      image: '/images/natalia.jpg',
+      bio: 'Owner and advanced laser practitioner at ND Skin Clinic. Started her beauty and skincare journey in 2005 in the UK. Natalia\'s in-depth knowledge of advanced cosmetic procedures, all types of laser and non-surgical body contouring procedures through 20 years of practical experience allows her to create bespoke highly effective treatment plans.',
+      qualifications: [
+        '20+ Years Beauty & Skincare Experience',
+        'Advanced Laser & Cosmetic Procedures',
+        'Non-Surgical Body Contouring Expert',
+        'CO2 Laser Specialist'
+      ]
+    },
+    {
       name: 'Dr. Lilia Cochrane',
       title: 'Medical Aesthetic Practitioner',
       credentials: 'MD',
@@ -23,13 +36,13 @@ export default function TeamSection({ onBookingClick }: TeamSectionProps) {
     <section id="team" className="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-primary-50">
       <div className="max-w-7xl mx-auto section-padding">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <span className="text-primary-600 font-medium tracking-wider uppercase text-xs sm:text-sm">Our Experts</span>
+          <span className="text-primary-600 font-medium tracking-wider uppercase text-xs sm:text-sm">CO2 Laser Experts</span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-2 sm:mt-4">
             Meet Your
-            <span className="block gradient-text">Treatment Team</span>
+            <span className="block gradient-text">Laser Specialists</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-neutral-600 mt-2 sm:mt-4 max-w-2xl mx-auto px-4">
-            Expert care from qualified professionals
+            35+ years combined experience in advanced laser treatments
           </p>
         </div>
 
