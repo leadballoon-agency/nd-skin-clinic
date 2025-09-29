@@ -327,7 +327,6 @@ export default function BookingModal({ isOpen, onClose, assessmentData }: Bookin
                     <option value="">No preference</option>
                     <option value="natalia">Natalia - Advanced Laser Practitioner</option>
                     <option value="lilia">Dr. Lilia - Medical Aesthetic Practitioner</option>
-                    <option value="yulia">Yulia - Beauty Therapist</option>
                     <option value="esther">Esther - Beauty Therapist</option>
                     <option value="diana">Diana - Nail Technician</option>
                   </select>

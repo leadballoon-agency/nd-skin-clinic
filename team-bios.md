@@ -1,19 +1,5 @@
 # ND Skin Clinic Team Bios
 
-## Yulia - Beauty Therapist
-Dynamic, passionate and talented beauty therapist delivering excellent customer service and treatments to our clients. Yulia is experienced and fully competent with our core beauty offerings. Carrying out treatments to the highest standard.
-
-**Services offered by Yulia:**
-- LVL lashes / lash fillers
-- Lash and brow lamination
-- Eyebrow tinting and shaping
-- Facials
-- Waxing
-- Non surgical body sculpting
-- Contouring
-- Hydrafacial
-- Environ Facials
-
 ## Esther - Beauty Therapist
 Meet Esther, Our New Beauty Therapist! We are delighted to welcome Esther to our team at the end of 2024!
 

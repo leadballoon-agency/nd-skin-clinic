@@ -5,19 +5,6 @@ interface TeamSectionProps {
 export default function TeamSection({ onBookingClick }: TeamSectionProps) {
   const team = [
     {
-      name: 'Yulia',
-      title: 'Beauty Therapist & Skincare Expert',
-      credentials: '',
-      image: '/images/yulia.jpg',
-      bio: 'Dynamic, passionate and talented beauty therapist delivering excellent customer service and treatments to our clients. Yulia is experienced and fully competent with our core beauty offerings, carrying out treatments to the highest standard.',
-      qualifications: [
-        'LVL Lashes & Lash Fillers',
-        'Lash & Brow Lamination',
-        'Hydrafacial & Environ Facials',
-        'Non-Surgical Body Sculpting'
-      ]
-    },
-    {
       name: 'Dr. Lilia Cochrane',
       title: 'Medical Aesthetic Practitioner',
       credentials: 'MD',
