@@ -101,23 +101,23 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
           ))}
         </div>
 
-        {/* Additional Image Section - Mobile Optimized */}
+        {/* Reception Area Section - Mobile Optimized */}
         <div className="mt-8 sm:mt-12">
           <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-premium">
-            <img 
-              src="/images/home2.jpg" 
-              alt="CO2 Laser Treatment Process" 
+            <img
+              src="/images/ND-reception.jpg"
+              alt="ND Skin Clinic Reception Area"
               className="w-full"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 sm:from-black/60 via-black/40 sm:via-transparent to-transparent flex items-center">
               <div className="p-6 sm:p-8 md:p-12 max-w-full sm:max-w-lg">
                 <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-4">
-                  See the Difference
+                  Welcome to ND Skin Clinic
                 </h3>
                 <p className="text-white/90 text-sm sm:text-base mb-4 sm:mb-6">
-                  Our CO2 laser treatments deliver remarkable, long-lasting results.
+                  Step into our modern, welcoming clinic designed for your comfort and relaxation during your CO2 laser journey.
                 </p>
-                <button 
+                <button
                   onClick={onBookingClick}
                   className="inline-flex items-center bg-white text-primary-600 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium text-sm sm:text-base hover:shadow-lg transition-all duration-300"
                 >
