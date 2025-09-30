@@ -105,7 +105,7 @@ export default function ResultsGallery({ onBookingClick }: ResultsGalleryProps) 
         <div className="mt-8 sm:mt-12">
           <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-premium">
             <img
-              src="/images/ND-reception.jpg"
+              src="/images/ND-reception.jpeg"
               alt="ND Skin Clinic Reception Area"
               className="w-full"
             />
